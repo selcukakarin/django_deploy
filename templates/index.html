@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block head %}
+
+{% endblock head %}
+
+{% block body %}
+<!-- Banner Area Start-->
+<section class="banner-area">
+    <div class="banner-thumb">
+        <img src="{% static 'assets/img/banner/banner.png' %}" alt="img">
+    </div>
+    <div class="banner-bg-img"></div>
+    <div class="banner-shape-1"><img src="{% static 'assets/img/banner/shape-1.png' %}" alt="img"></div>
+    <div class="banner-shape-2"><img src="{% static 'assets/img/banner/shape-2.png' %}" alt="img"></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8 align-self-center">
+                <div class="banner-inner text-center">
+                    <h3>Do not miss it!</h3>
+                    <h1>Pizza tastes better than skinny feels.</h1>
+                    <a class="btn btn-secondary" href="shop.html">GET IT NOW</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Banner Area End -->
+<!-- testimonial Area Start-->
+<section class="testimonial-area text-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7 col-md-10">
+                <div class="testimonial-slider owl-carousel">
+                    <div class="item">
+                        <div class="testimonial-wrap">
+                            <p>“We have no regrets! I don't know what else to say. It really saves me time and effort.
+                                Food is exactly what our business has been lacking”</p>
+                            <h3>Julia R. Davis
+                            </h3>
+                            <h6>Food Bloger</h6>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimonial-wrap">
+                            <p>“We have no regrets! I don't know what else to say. It really saves me time and effort.
+                                Food is exactly what our business has been lacking”</p>
+                            <h3>Davis J. Rulia
+                            </h3>
+                            <h6>Food Bloger</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- testimonial Area End -->
+{% endblock body %}

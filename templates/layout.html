@@ -1,0 +1,77 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="icon" href="{% static 'assets/img/fevicon.png' %}">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/magnific.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/jquery-ui.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/nice-select.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/slick-slide.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/remixicon/remixicon.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800&family=Bebas+Neue&family=Satisfy&family=Quattrocento:wght@400;700&display=swap"
+          rel="stylesheet">
+
+    <title>Selçuk Blog</title>
+    {% block head %}
+
+    {% endblock head %}
+</head>
+<body>
+{% include "includes/navbar.html" %}
+
+<div class="">
+    {% if messages %}
+    <div style="margin-top:6em; position:absolute; z-index:55;">
+        {% for message in messages %}
+        <div {% if message.tags %} class="alert alert-{{ message.tags }}" {% endif %} role="alert">
+            {{ message }}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% block body %}
+    {% endblock body %}
+    {% include "includes/footer.html" %}
+</div>
+
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/popper.js' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+
+
+<!-- all plugins here -->
+<script src="{% static 'assets/js/jquery.3.6.min.js' %}"></script>
+<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/js/imageloded.min.js' %}"></script>
+<script src="{% static 'assets/js/counterup.js' %}"></script>
+<script src="{% static 'assets/js/waypoint.js' %}"></script>
+<script src="{% static 'assets/js/magnific.min.js' %}"></script>
+<script src="{% static 'assets/js/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'assets/js/jquery-ui.min.js' %}"></script>
+<script src="{% static 'assets/js/nice-select.min.js' %}"></script>
+<script src="{% static 'assets/js/fontawesome.min.js' %}"></script>
+<script src="{% static 'assets/js/owl.min.js' %}"></script>
+<script src="{% static 'assets/js/slick-slider.min.js' %}"></script>
+<script src="{% static 'assets/js/wow.min.js' %}"></script>
+<script src="{% static 'assets/js/tweenmax.min.js' %}"></script>
+<!-- main js  -->
+<script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+</html>

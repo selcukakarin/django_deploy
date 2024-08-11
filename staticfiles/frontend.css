@@ -1,0 +1,127 @@
+p{
+color:lightgreen;
+background: orange;
+font-size:100px;
+}
+/*
+a:link {
+    color: cyan;
+    background: lightpink;
+    text-decoration: none;
+}
+
+a:visited {
+    color: orange;
+    background: lightblue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: green;
+    background: black;
+    text-decoration: underline;
+}
+
+a:active {
+    color: yellow;
+    background: gray;
+    text-decoration: none;
+}
+*/
+
+/*
+aşağıdaki kod şunları bunları yapar
+safasfsafas
+safasfsafsa
+*/
+a:link, a:visited {
+    background: gray;
+    color: lightblue;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    background:red;
+    color:white;
+}
+
+body {
+    background-image: url('manzara.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* aşağıdaki kod şunları bunları yapar */
+        li.yeni_class {
+            font-weight: bold !important;
+        }
+        ul>li.yeni_class{
+            background-color: red !important;
+        }
+        ol>li{
+            background-color: lightblue !important;
+        }
+        /*
+        * {
+            text-align: center;
+            color: blue;
+        }
+        */
+        body {
+            background-color: lightyellow;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+
+        }
+        th, td {
+            background-color: #96D4D4;
+            padding:15px;
+        }
+        th:nth-child(odd){
+            background-color: yellow !important;
+        }
+        td:nth-child(odd){
+            background-color: purple !important;
+        }
+
+        .yeni_class{
+            background-color: lightgreen;
+            font-size:17px;
+            color:gray;
+            font-family: calibri;
+            padding: 20px;
+        }
+
+        .new_class2 {
+            border: 1px solid red;
+        }
+
+        #benim_p_etiketim{
+            background: lightblue;
+            color: darkgray;
+            padding:40px;
+            text-align:center;
+        }
+        p {
+            margin: auto;
+            width: 150px;
+            border: 3px solid black;
+            /* padding: 50px; */
+            padding-top: 20px;
+            padding-right: 30px;
+            padding-bottom: 70px;
+            padding-left: 10px;
+            text-decoration: overline;
+            text-decoration-color: chocolate;
+            text-decoration-thickness: 3px;
+            font-family: "Bodoni Moda SC", "Playwrite DK Uloopet", cursive;
+            font-style: italic;
+            text-decoration-style: solid;
+            font-weight: bold;
+            /* font-variant: small-caps; */
+            font-size: 1rem;
+        }

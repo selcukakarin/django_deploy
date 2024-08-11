@@ -1,0 +1,63 @@
+{% load static %}
+
+<!-- navbar start -->
+<header class="navbar-area">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container nav-container">
+            <div class="responsive-mobile-menu">
+                <button class="menu toggle-btn d-block d-lg-none" data-target="#themefie_main_menu"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="icon-left"></span>
+                    <span class="icon-right"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="themefie_main_menu">
+                <ul class="navbar-nav menu-open">
+                    <li class="current-menu-item">
+                        <a href="{% url 'article:articles' %}">MAKALELER</span></a>
+                    </li>
+                    <li class="current-menu-item">
+                        <a href="{% url 'hakkimizda' %}">HAKKIMIZDA</span></a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="logo">
+                <a class="main-logo" href="{% url 'index' %}"><img src="{% static 'logo.png' %}" height="40px" width="100px"
+                                                             alt="img"></a>
+            </div>
+            <div class="nav-right-part nav-right-part-mobile">
+                <ul>
+                    <li><a class="search" href="#"><i class="ri-search-line"></i></a>
+                    </li>
+                    <li class="phone-contact d-md-block d-none"><i class="ri-phone-fill float-start"></i>
+                        +997 509 153 849
+                    </li>
+                    <li class="menu-cart"><a href="cart.html">CART <span>1</span></a></li>
+                    <li>49.50 $</li>
+                </ul>
+            </div>
+            <div class="nav-right-part nav-right-part-desktop">
+                <ul>
+
+                    {% if request.user.is_authenticated %}
+                    <li class="current-menu-item">
+                        <a href="{% url 'article:dashboard' %}">KONTROL PANELI</span></a>
+                    </li>
+                    <li class="current-menu-item">
+                        <a href="{% url 'user:logout' %}">CIKIS YAP</span></a>
+                    </li>
+                    {% else %}
+                    <li class="current-menu-item">
+                        <a href="{% url 'user:register' %}">KAYIT OL</span></a>
+                    </li>
+                    <li class="current-menu-item">
+                        <a href="{% url 'user:login' %}">GIRIS YAP</span></a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- navbar end -->
